@@ -6,17 +6,40 @@
 body{
     background-color: #F9F5EA;
 }
+main {
+    text-align: center;
+}
 h1{
     font-family: "PPAgrandirir-Normal";
     font-weight: 500;
     font-size: 5em;
     color: #71160C;
-    margin: 190px 0 480px 0;
+    margin: 190px auto 480px auto;
     text-align: center;
+    display: inline-block;
     line-height: 90px;
+    position: relative;
+    z-index: 1;
+    background: none;
 }
-h1 strong {
-    font-weight: 800;
+h1 br, h1 {
+    position: relative;
+    z-index: 2;
+}
+.resaltado-texto {
+    position: relative;
+    display: inline-block;
+}
+
+.resaltado-debajo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20%);
+    bottom: 0;
+    width: 120%;
+    max-width: 380px;
+    pointer-events: none;
+    z-index: -1;
 }
 .main-nav {
     display: flex;
@@ -123,6 +146,10 @@ h1 strong {
 
 .nav-social img:hover {
     filter: invert(40%) sepia(80%) saturate(1200%) hue-rotate(300deg) brightness(1.2);
+}
+
+h1 {
+    z-index: 1;
 }
 
 @media (max-width: 900px) {
