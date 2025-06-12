@@ -3,6 +3,10 @@
     src: url(fonts/PPAgrandirNormalUprightVariable.ttf) format("opentype");
 }
 
+body{
+    background-color: #F9F5EA;
+}
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "PPAgrandir-Normal";
+    font-weight: 500;
 }
