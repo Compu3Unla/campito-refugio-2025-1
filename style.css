@@ -72,9 +72,7 @@ h1{
     box-shadow: none;
     min-width: 180px;
     z-index: 10;
-    padding: 35px 0 10px 0; /* Aumenta el padding-top para crear espacio visible */
-    margin-top: 0; /* Elimina el margin-top que causaba el problema de hover */
-}
+    padding: 35px 0 10px 0; 
 
 .dropdown-contenido li {
     padding: 0;
