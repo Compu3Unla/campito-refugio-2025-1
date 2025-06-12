@@ -14,7 +14,7 @@ h1{
     font-weight: 500;
     font-size: 5em;
     color: #71160C;
-    margin: 190px auto 480px auto;
+    margin: 190px auto 20px auto;
     text-align: center;
     display: inline-block;
     line-height: 90px;
@@ -148,8 +148,27 @@ h1 br, h1 {
     filter: invert(40%) sepia(80%) saturate(1200%) hue-rotate(300deg) brightness(1.2);
 }
 
-h1 {
-    z-index: 1;
+
+.boton-adopta {
+    display: inline-block;
+    margin: 23px 0 60px 0;
+    background: #EC6642;
+    color: #fff;
+    font-family: "PPAgrandirir-Normal";
+    font-size: 1.6em;
+    font-weight: 600;
+    border: #71160C 2px solid;
+    border-radius: 100px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+    text-decoration: none;
+}
+
+.boton-adopta:hover {
+    background: #71160C;
+    color: #fffbe7;
+    transform: translateY(-2px) scale(1.04);
 }
 
 @media (max-width: 900px) {
