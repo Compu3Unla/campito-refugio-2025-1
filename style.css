@@ -1,16 +1,19 @@
 @font-face {
-    font-family: "PPAgrandirir-Normal";
+    font-family: "PPAgrandir-Normal";
     src: url(fonts/PPAgrandirNormalUprightVariable.ttf) format("opentype");
 }
 
-body{
+body {
     background-color: #F9F5EA;
+    margin: 0;
 }
+
 main {
     text-align: center;
 }
-h1{
-    font-family: "PPAgrandirir-Normal";
+
+h1 {
+    font-family: "PPAgrandir-Normal";
     font-weight: 500;
     font-size: 5em;
     color: #71160C;
@@ -22,10 +25,13 @@ h1{
     z-index: 1;
     background: none;
 }
-h1 br, h1 {
+
+h1 br,
+h1 {
     position: relative;
     z-index: 2;
 }
+
 .resaltado-texto {
     position: relative;
     display: inline-block;
@@ -41,6 +47,7 @@ h1 br, h1 {
     pointer-events: none;
     z-index: -1;
 }
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -48,10 +55,10 @@ h1 br, h1 {
     background: #E3F049;
     border-radius: 40px;
     padding: 0 40px;
-    margin: 20px auto 40px auto;
+    margin: 20px 30px 40px 30px;
     height: 60px;
     max-width: 96vw;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .nav-logo img {
@@ -64,12 +71,12 @@ h1 br, h1 {
     align-items: center;
     gap: 80px;
     list-style: none;
-    font-family: "PPAgrandirir-Normal";
+    font-family: "PPAgrandir-Normal";
     font-size: 1.1em;
     color: #191919;
 }
 
-.nav-menu > li {
+.nav-menu>li {
     position: relative;
 }
 
@@ -103,7 +110,7 @@ h1 br, h1 {
     box-shadow: none;
     min-width: 180px;
     z-index: 10;
-    padding: 35px 0 10px 0; 
+    padding: 35px 0 10px 0;
 }
 
 .dropdown-contenido li {
@@ -117,7 +124,7 @@ h1 br, h1 {
     background: #E3F049;
     color: #191919;
     font-size: 0.92em;
-    font-family: "PPAgrandirir-Normal";
+    font-family: "PPAgrandir-Normal";
     padding: 9px 17px;
     border-radius: 24px;
     margin-bottom: 3px;
@@ -154,7 +161,7 @@ h1 br, h1 {
     margin: 23px 0 60px 0;
     background: #EC6642;
     color: #fff;
-    font-family: "PPAgrandirir-Normal";
+    font-family: "PPAgrandir-Normal";
     font-size: 1.6em;
     font-weight: 600;
     border: #71160C 2px solid;
@@ -178,11 +185,351 @@ h1 br, h1 {
         padding: 16px 80px;
         gap: 18px;
     }
+
     .nav-menu {
         gap: 24px;
         font-size: 0.98em;
     }
+
     .nav-logo img {
         height: 38px;
     }
+}
+
+/* FOOTER */
+footer {
+    background: #FBDD9D;
+    color: #71160C;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 40px 0 20px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+footer section {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+footer h4 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #71160C;
+}
+
+footer h6 {
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #71160C;
+}
+
+.newsletter-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    padding-right: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    background: #FCF7EA;
+    border: 2px solid #71160C;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 18px 24px;
+    font-size: 1.2em;
+    background: transparent;
+    color: #71160C;
+    font-family: inherit;
+}
+
+.arrow-btn {
+    border: none;
+    background: #F5B5D2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-left: -40px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(.4, 2.08, .55, .44), background 0.3s;
+    z-index: 1;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.arrow-btn .arrow {
+    font-size: 2em;
+    color: #71160C;
+    transition: color 0.3s;
+}
+
+.arrow-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #F5B5D2;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: -1;
+}
+
+.arrow-btn:active,
+.arrow-btn:focus {
+    outline: none;
+}
+
+.arrow-btn:active {
+    transform: translateX(47px);
+}
+
+.arrow-btn:active::after {
+    opacity: 0.5;
+}
+
+.arrow-btn:focus-visible {
+    outline: 2px solid #71160C;
+}
+
+.arrow-btn:active .arrow {
+    color: #fff;
+}
+
+.footer-huella {
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    width: 50vw;
+    max-width: 400px;
+    opacity: 50;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1vw;
+}
+
+.footer-links nav>ul>li>p>span {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-links nav ul {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+}
+
+.footer-links nav>ul>li {
+    flex: 1 1 0;
+    min-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-links nav ul ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.footer-links nav ul ul li {
+    display: block;
+    margin-bottom: 8px;
+    white-space: normal;
+}
+
+.footer-links nav ul ul li a {
+    color: #71160C;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+
+}
+
+.footer-links nav ul ul li a:hover {
+    text-decoration: underline;
+}
+
+footer section:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+footer section:last-of-type div a {
+    color: #71160C;
+    margin-left: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.2s;
+}
+
+footer section:last-of-type div a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    border: none;
+    border-top: 2px solid #71160C;
+    width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+/* seccion viejitos-finales-historias */
+
+.viejitos-finales-historias {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    margin: 60px auto 100px auto;
+    max-width: 1200px;
+}
+
+.club-viejitos {
+    width: 100%;
+    border: 2.5px solid #71160C;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 32px 32px 32px 24px;
+    box-sizing: border-box;
+    text-align: left;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-viejitos img {
+    margin-top: 100px;
+    margin-left: 80px;
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+    height: auto;
+    display: block;
+}
+
+.club-viejitos h3 {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 3em;
+    color: #71160C;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.club-viejitos h6 {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.5em;
+    color: #71160C;
+    margin: 0 0 18px 0;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.club-viejitos a {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    display: inline-block;
+    background: #71160C;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5em;
+    border-radius: 32px;
+    padding: 16px 48px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.club-viejitos a:hover {
+    background: #EC6642;
+}
+
+.viejitos-finales-historias>div:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    width: 100%;
+    justify-content: center;
+}
+
+.finales-felices,
+.historias {
+    flex: 1 1 0;
+    border: 2.5px solid #71160C;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 18px 22px 18px;
+    height: 400px;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.historias img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.finales-felices img {
+    width: 300px;
+    height: auto;
+
+}
+
+.finales-felices h3,
+.historias h3 {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 2.5em;
+    color: #71160C;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.finales-felices h6,
+.historias h6 {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.5em;
+    color: #71160C;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.4;
 }
