@@ -648,7 +648,7 @@ footer hr {
 }
 
 .titulo-camperitos {
-    color: #F9F5EA;
+    color: #71160C;
     font-size: 2.8em;
     font-family: 'PPAgrandir-Normal', Arial, sans-serif;
     font-weight: bold;
@@ -656,6 +656,10 @@ footer hr {
     margin-bottom: 40px;
     text-align: center;
     letter-spacing: 1px;
+}
+
+.titulo-camperitos.nuestros-camperitos {
+    color: #F9F5EA;
 }
 
 .edad-camperito span {
@@ -966,5 +970,10 @@ footer hr {
     margin: 150px auto;
     max-width: 1400px;
     padding: 32px 0;
+}
+
+h6.campito-descripcion {
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
