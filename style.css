@@ -977,3 +977,41 @@ h6.campito-descripcion {
     padding-right: 8%;
 }
 
+.campito-svg-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    gap: 32px;
+}
+
+.campito-svg-icon {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44), box-shadow 0.2s;
+}
+
+.campito-svg-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(113, 22, 12, 0.10);
+    z-index: 2;
+}
+
+.campito-svg-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campito-svg-col h6.campito-descripcion {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 18px;
+}
+
