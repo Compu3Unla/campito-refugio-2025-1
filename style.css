@@ -35,9 +35,17 @@ h2 {
     text-align: left;
 }
 
+h3 {
+    font-family: "PPAgrandir-Normal";
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #71160C;
+    text-align: left;
+}
+
 h6 {
     font-family: "PPAgrandir-Normal";
-    font-weight: 500;
     font-size: 1.5rem;
     text-align: left;
     color: #71160C;
@@ -468,7 +476,6 @@ footer hr {
 
 .club-viejitos h3 {
     font-family: 'PPAgrandir-Normal', Arial, sans-serif;
-    font-size: 3em;
     color: #71160C;
     margin: 0 0 10px 0;
     font-weight: bold;
@@ -545,8 +552,8 @@ footer hr {
 }
 
 .polaroid-frame {
-    width: 170px;
-    height: 220px;
+    width: 270px;
+    height: 320px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -748,7 +755,7 @@ footer hr {
 
 .info-camperito {
     width: 100%;
-    padding: 0px 18px 0 70px;
+    padding: 0px 20px 0 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -948,16 +955,17 @@ footer hr {
     }
 }
 
-/* PAG FICHA PERROS */
+/* PAG FICHA PERROS GENERAL */
 
-.hero-paginas{
+.hero-paginas {
     margin-left: 250px;
 }
+
 .hero-paginas h2 {
     font-weight: 400;
 }
 
-.hero-paginas h2 span{
+.hero-paginas h2 span {
     font-weight: 500;
 }
 
@@ -992,7 +1000,7 @@ h6.campito-descripcion {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44), box-shadow 0.2s;
+    transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44), box-shadow 0.2s;
 }
 
 .campito-svg-icon:hover {
@@ -1015,3 +1023,327 @@ h6.campito-descripcion {
     margin-top: 18px;
 }
 
+.extra-camperito {
+    display: none;
+}
+
+.toggle-mas:checked~.galeria-camperitos-pag .extra-camperito {
+    display: block;
+}
+
+.toggle-mas:checked~.boton-mostrar-mas {
+    display: none;
+}
+
+.boton-mostrar-mas {
+    background: #FBDD9D;
+    color: #71160C;
+    border: 3px solid #71160C;
+    border-radius: 100px;
+    font-family: "PPAgrandir-Normal";
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: 10px 60px;
+    margin: 23px 0 60px 0;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.boton-mostrar-mas:hover {
+    background: #71160C;
+    color: #FBDD9D;
+}
+
+/* PAG FICHA PERROS individual */
+
+.titulo-ficha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    margin-right: 360px;
+}
+
+.titulo-ficha-perro {
+    color: #71160C;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    margin: 130px 360px 40px 360px;
+    text-align: left;
+    line-height: 1;
+}
+
+.boton-return img {
+    width: 50px;
+    height: 50px;
+    display: block;
+
+}
+
+.boton-return {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: filter 0.2s;
+    margin-top: 5em;
+}
+
+.boton-return:hover img {
+    filter: brightness(0.8);
+}
+
+.ficha-perro-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    max-width: 1200px;
+    margin: 80px auto 120px auto;
+    flex-wrap: wrap;
+}
+
+.ficha-perro-galeria {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ficha-perro-imgbox {
+    position: relative;
+    width: 570px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 20px;
+    border: 3px solid #71160C;
+
+}
+
+.boton-ficha {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 3px solid #71160C;
+    background: #FBDD9D;
+    color: #71160C;
+    font-size: 1.6em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin: 0 -15px;
+    z-index: 2;
+    padding: 20px
+}
+
+.boton-ficha:hover {
+    background: #F5B5D2;
+    transform: scale(1.08);
+}
+
+#foto1:checked~#izq1,
+#foto1:checked~.ficha-perro-imgbox .foto1,
+#foto1:checked~#der1 {
+    display: inline-flex;
+}
+
+#foto2:checked~#izq2,
+#foto2:checked~.ficha-perro-imgbox .foto2,
+#foto2:checked~#der2 {
+    display: inline-flex;
+}
+
+#foto3:checked~#izq3,
+#foto3:checked~.ficha-perro-imgbox .foto3,
+#foto3:checked~#der3 {
+    display: inline-flex;
+}
+
+.boton-ficha {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.izq {
+    left: -60px;
+}
+
+.der {
+    right: -60px;
+}
+
+.globo-hueso {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 180px;
+    z-index: 3;
+}
+
+.ficha-perro-info {
+    flex: 1;
+    min-width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.ficha-perro-nombre {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 0.2em;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 2.8em;
+    color: #71160C;
+    font-weight: bold;
+}
+
+.ficha-perro-detalle {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.3em;
+    color: #71160C;
+    font-weight: 600;
+    margin: 8px 0 18px 0;
+}
+
+.ficha-perro-desc {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    color: #71160C;
+    font-size: 1.1em;
+    max-width: 420px;
+    margin-bottom: 24px;
+}
+
+.ficha-perro-caracteristicas {
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ficha-perro-adoptar {
+    font-size: 1.2em;
+    margin-top: 18px;
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+/* POP UP FORMULARIO*/
+body:has(#popup:target) main {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-overlay:target {
+    display: flex;
+}
+
+.popup-form {
+    background-color: #F5B5D2;
+    padding: 1rem 5rem 4rem 5rem;
+    border-radius: 20px;
+    border: 3px solid #71160C;
+    max-width: 700px;
+    height: 500px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+}
+
+.cerrar-popup {
+    position: absolute;
+    top: 65px;
+    right: 40px;
+    text-decoration: none;
+    background: #FBDD9D;
+    border: 3px solid #71160C;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #71160C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 40px;
+    border: 3px solid #71160C;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    height: 150px;
+    border-radius: 20px;
+    width: 96%;
+}
+
+.btn-enviar {
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0.8rem;
+    background-color: #71160C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+}

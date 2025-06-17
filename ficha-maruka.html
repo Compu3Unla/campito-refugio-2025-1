@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Campito Refugio</title>
+    <link rel="icon" type="image/x-icon" href="img/svg/perro-orejita.svg">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="img/svg/perro-orejita.svg" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-dropdown">
+                    <a href="galeria-perritos.html">Adopciones <img src="img/svg/flecha-desplegable-nav.svg"
+                            alt="Desplegable" class="nav-arrow"></a>
+                    <ul class="dropdown-contenido">
+                        <li><a href="#">Nuestros Camperitos</a></li>
+                        <li><a href="#">¿Cómo Adoptar?</a></li>
+                        <li><a href="#">Transito</a></li>
+                    </ul>
+                </li>
+                <li><a href="donaciones.html">Doná</a></li>
+                <li><a href="donaciones.html">Sé Parte</a></li>
+                <li><a href="donaciones.html">Sobre nosotros</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="#"><img src="img/svg/instagram-icono.svg" alt="Instagram"></a>
+                <a href="#"><img src="img/svg/facebook-icono.svg" alt="Facebook"></a>
+                <a href="#"><img src="img/svg/youtube-icono.svg" alt="YouTube"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="titulo-ficha">
+            <h2 class="titulo-ficha-perro">¡Hola! soy...</h2>
+            <a href="galeria-perritos.html" class="boton-return">
+                <img src="img/svg/boton-return.svg" alt="Volver">
+            </a>
+        </div>
+        <div class="ficha-perro-contenedor">
+            <div class="ficha-perro-galeria">
+
+                <input type="radio" name="slider" id="foto1" checked hidden>
+                <input type="radio" name="slider" id="foto2" hidden>
+                <input type="radio" name="slider" id="foto3" hidden>
+
+                <label for="foto3" class="boton-ficha izq" id="izq1">&lt;</label>
+                <label for="foto1" class="boton-ficha izq" id="izq2">&lt;</label>
+                <label for="foto2" class="boton-ficha izq" id="izq3">&lt;</label>
+
+                <div class="ficha-perro-imgbox">
+                    <img src="img/perros-fichas/marukaficha1.jpg" alt="Maruka" class="foto-galeria foto1">
+                    <img src="img/perros-fichas/marukaficha2.jpg" alt="Maruka 2" class="foto-galeria foto2">
+                    <img src="img/perros-fichas/marukaficha3.jpg" alt="Maruka 3" class="foto-galeria foto3">
+                    <img src="img/svg/dialogo-huesito.svg" alt="" class="globo-hueso">
+                </div>
+
+                <label for="foto2" class="boton-ficha der" id="der1">&gt;</label>
+                <label for="foto3" class="boton-ficha der" id="der2">&gt;</label>
+                <label for="foto1" class="boton-ficha der" id="der3">&gt;</label>
+            </div>
+
+            <div class="ficha-perro-info">
+                <div class="ficha-perro-nombre">
+                    <span>Maruka</span>
+                </div>
+                <div class="ficha-perro-detalle">
+                    +6 años | Hembra | Grande
+                </div>
+                <p class="ficha-perro-desc">
+                    Soy de tamaño grande y suelen decir que soy muy tranquila. Ya tengo muchos años de experiencia en
+                    esta vida pero todavía me falta una cosa importante: vivir con una familia que me ame y me mime.
+                    ¡Confío en que llegará pronto!
+                </p>
+                <div class="ficha-perro-caracteristicas">
+                    <span class="caracteristica discapacitado">Discapacitada</span>
+                    <span class="caracteristica compañero">Compañera</span>
+                    <span class="caracteristica mimoso">Mimosa</span>
+                    <span class="caracteristica dormilon">Dormilona</span>
+                </div>
+                <a href="#popup">
+                <button class="ver-todo-camperitos ficha-perro-adoptar">¡Adoptame!</button></a>
+            </div>
+        </div>
+    </main>
+    
+    <div id="popup" class="popup-overlay">
+  <div class="popup-form">
+    <a href="#" class="cerrar-popup">X</a>
+    <h3>¿Querés adoptar?</h3>
+    <form>
+      <div class="input-group">
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Apellido" required>
+      </div>
+      <div class="input-group">
+        <input type="tel" placeholder="Teléfono" required>
+        <input type="email" placeholder="E-mail" required>
+      </div>
+      <textarea placeholder="Contanos por qué querés adoptar a este perrito"></textarea>
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </div>
+</div>
+
+</body>
+<footer>
+    <section>
+        <h4>Unite a nuestra comunidad</h4>
+        <h6> Adopciones, historias, eventos y mucho <br>
+            amor perruno en tu bandeja de entrada.</h6>
+        <form class="newsletter-form">
+            <input type="email" placeholder="nombre@ejemplo.com" required>
+            <button type="submit" class="arrow-btn">
+                <span class="arrow">→</span>
+            </button>
+        </form>
+    </section>
+    <hr>
+    <img src="img/svg/huellitas.svg" alt="huella" class="footer-huella">
+    <section class="footer-links">
+        <nav>
+            <ul>
+                <li>
+                    <p><span>Adoptá</span></p>
+                    <ul>
+                        <li><a href="#">Nuestros Camperitos</a></li>
+                        <li><a href="#">¿Cómo Adoptar?</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">¡Adoptá!</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><span>Doná</span></p>
+                    <ul>
+                        <li><a href="#">Donaciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><span>Sé Parte</span></p>
+                    <ul>
+                        <li><a href="#">Voluntariado</a></li>
+                        <li><a href="#">Sé tránsito</a></li>
+                        <li><a href="#">Visitanos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><span>Sobre Nosotros</span></p>
+                    <ul>
+                        <li><a href="#">Nuestro refugio</a></li>
+                        <li><a href="#">Dirección</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <hr>
+    <section>
+        <p>Refugio El Campito 2025 - Todos los Derechos Reservados </p>
+        <div class="nav-social">
+            <a href="#"><img src="img/svg/instagram-icono.svg" alt="Instagram"></a>
+            <a href="#"><img src="img/svg/facebook-icono.svg" alt="Facebook"></a>
+            <a href="#"><img src="img/svg/youtube-icono.svg" alt="YouTube"></a>
+        </div>
+    </section>
+</footer>
+
+</html>
