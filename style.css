@@ -1021,8 +1021,7 @@ h6.campito-descripcion {
     overflow: hidden;
 }
 
-
-.hero-paginas::before {
+body.galeria-perritos-activa .hero-paginas::before {
     content: "";
     position: absolute;
     top: 80px;
@@ -1032,15 +1031,13 @@ h6.campito-descripcion {
     background-image: url('img/svg/huellitas-fosforito.svg');
     background-size: contain;
     background-repeat: no-repeat;
-
     transform: rotate(30deg) translateX(-20px);
     z-index: 0;
     pointer-events: none;
     opacity: 1;
 }
 
-
-.hero-paginas::after {
+body.galeria-perritos-activa .hero-paginas::after {
     content: "";
     position: absolute;
     bottom: 20px;
