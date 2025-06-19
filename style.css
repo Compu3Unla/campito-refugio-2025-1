@@ -1773,3 +1773,52 @@ textarea {
 header {
     margin-bottom: 48px;
 }
+
+/* Stickers decorativos entre tarjetas y agradecimiento en donaciones */
+.stickers-donaciones {
+    position: relative;
+    height: 270px;
+    margin-bottom: 18px;
+    display: block;
+    width: 100%;
+    z-index: 2;
+}
+.sticker-donacion {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+}
+.sticker-donacion.sticker-1 {
+    width: 155px !important;
+    left: 6%;
+    top: 30px;
+    transform: rotate(-14deg);
+}
+.sticker-donacion.sticker-2 {
+    width: 90px !important;
+    left: 25%;
+    top: 150px;
+    transform: rotate(18deg);
+}
+.sticker-donacion.sticker-3 {
+    width: 155px !important;
+    left: 46%;
+    top: 60px;
+    transform: rotate(-8deg);
+}
+.sticker-donacion.sticker-4 {
+    width: 155px !important;
+    right: 28%;
+    top: 160px;
+    transform: rotate(10deg);
+}
+.sticker-donacion.sticker-5 {
+    width: 155px !important;
+    right: 8%;
+    top: 40px;
+    transform: rotate(-12deg);
+}
+
+.h2-agradecimiento {
+    margin-top: 90px !important;
+}
