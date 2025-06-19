@@ -683,20 +683,43 @@ h6.campito-descripcion {
 .camperitos-bg {
     position: relative;
     width: 100vw;
-    min-height: 1000px;
+    min-height: 100vh;
     background: none;
     overflow: hidden;
+    padding-bottom: 0;
 }
 
 .fondo-puntas {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100vw;
-    height: 1500px;
+    height: 100%;
+    min-height: 100vh;
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
+}
+
+.agradecimiento-donaciones {
+    margin: 60px auto 0 auto;
+    text-align: center;
+    color: #fff;
+    font-family: "PPAgrandir-Normal";
+    z-index: 2;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.agradecimiento-donaciones h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.agradecimiento-donaciones p {
+    font-size: 1.2em;
+    color: #fff;
 }
 
 .camperitos-contenido {
@@ -1471,4 +1494,94 @@ textarea {
 
 .galeria-scroll::-webkit-scrollbar-track {
     background: #fff;
+}
+
+/* Tarjetas donaciones sobre fondo decorativo */
+.tarjetas-donaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 100px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 40px 0;
+}
+
+.donacion-card {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 24px 0 rgba(113, 22, 12, 0.10);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+    position: relative;
+    z-index: 2;
+    border: 2px solid #71160C;
+    text-align: left;
+    color: #71160C;
+}
+
+.donacion-card h3,
+.donacion-card h4,
+.donacion-card p,
+.donacion-card a {
+    color: #71160C;
+    text-align: left;
+    width: 100%;
+}
+
+.donacion-card h3 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #71160C;
+}
+
+.donacion-card h4 {
+    font-family: "PPAgrandir-Normal";
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    color: #71160C;
+}
+
+.donacion-card.mercado-pago,
+.donacion-card.apadrina-camperito {
+    background: #FBDD9D;
+}
+
+.donacion-card div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0;
+    margin-top: 18px;
+}
+
+.donacion-card a {
+    display: inline-block;
+    width: auto;
+    min-width: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    background: #f5b5d2;
+    color: #71160C;
+    border: 2px solid #71160C;
+    border-radius: 100px;
+    font-family: "PPAgrandir-Normal";
+    font-size: 1em;
+    font-weight: 600;
+    padding: 8px 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.donacion-card a:hover {
+    background: #71160C;
+    color: #fff;
 }
