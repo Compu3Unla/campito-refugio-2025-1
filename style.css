@@ -12,6 +12,10 @@ main {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1 {
     font-family: "PPAgrandir-Normal";
     font-weight: 500;
@@ -53,6 +57,7 @@ h6 {
 
 p {
     font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.1em;
 }
 
 h1 br,
@@ -272,6 +277,7 @@ footer h6 {
     border-radius: 32px;
     overflow: hidden;
     position: relative;
+    z-index: 1;
 }
 
 .newsletter-form input[type="email"] {
@@ -350,7 +356,7 @@ footer h6 {
     left: 40px;
     bottom: 50px;
     width: 50vw;
-    max-width: 400px;
+    max-width: 350px;
     opacity: 50;
     z-index: 0;
     pointer-events: none;
@@ -755,7 +761,7 @@ h6.campito-descripcion {
     margin: 0 8px;
     z-index: 2;
     padding: 20px;
-     text-decoration: none;
+    text-decoration: none;
 }
 
 .boton-galeria:hover {
@@ -1018,42 +1024,14 @@ h6.campito-descripcion {
     margin-left: 200px;
     padding: 20px 60px;
     position: relative;
-    overflow: hidden;
-}
 
-body.galeria-perritos-activa .hero-paginas::before {
-    content: "";
-    position: absolute;
-    top: 80px;
-    right: 300px;
-    width: 220px;
-    height: 220px;
-    background-image: url('img/svg/huellitas-fosforito.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(30deg) translateX(-20px);
-    z-index: 0;
-    pointer-events: none;
-    opacity: 1;
-}
-
-body.galeria-perritos-activa .hero-paginas::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    right: 100px;
-    width: 300px;
-    height: 300px;
-    background-image: url('img/svg/huellitas-fosforito.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 1;
+    min-height: 320px;
 }
 
 .hero-paginas h2 {
     font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-paginas h2 span {
@@ -1063,6 +1041,51 @@ body.galeria-perritos-activa .hero-paginas::after {
 .hero-paginas h6 {
     text-align: left;
     font-weight: 500;
+}
+
+.huellitas-hero {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.huellita-1 {
+    width: 350px;
+    top: 120px;
+    right: 200px;
+    transform: rotate(-5deg);
+}
+
+.huellita-2 {
+    top: 20px;
+    left: -100px;
+    width: 200px;
+    transform: rotate(30deg);
+    z-index: 0;
+}
+
+.huellitas-hero-nosotros {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.huellita-3 {
+    width: 250px;
+    top: 80px;
+    right: 350px;
+    transform: rotate(-10deg);
+}
+
+.huellita-4 {
+    top: 350px;
+    right: 150px;
+    width: 250px;
+    transform: rotate(5deg);
 }
 
 .galeria-camperitos-pag {
@@ -1209,7 +1232,7 @@ body.galeria-perritos-activa .hero-paginas::after {
     transition: background 0.2s, transform 0.2s;
     margin: 0 -15px;
     z-index: 2;
-    padding: 20px ;
+    padding: 20px;
     text-decoration: none;
 }
 
@@ -1459,7 +1482,6 @@ textarea {
     box-shadow: 0 4px 16px rgba(113, 22, 12, 0.10);
 }
 
-/* Opcional: oculta la barra de scroll en Chrome/Safari */
 .galeria-scroll::-webkit-scrollbar {
     height: 8px;
 }
@@ -1471,4 +1493,123 @@ textarea {
 
 .galeria-scroll::-webkit-scrollbar-track {
     background: #fff;
+}
+
+/* SOBRE NOSOTROS PAG*/
+.sobre-nosotros-cuadricula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 16px;
+}
+
+.sobre-nosotros-forma {
+    border: 3px solid #71160C;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    color: #71160C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 40px 25px 40px;
+}
+
+.forma-texto1,
+.forma-texto2 {
+    background: #FBDD9D;
+
+}
+
+.forma-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.forma-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    max-height: 470px;
+    max-width: 535px;
+}
+
+.forma-video {
+    background: #F5B5D2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.forma-video video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 30px;
+    max-height: 500px;
+
+}
+
+.sobre-nosotros-forma h3 {
+    font-size: 2em;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    color: #71160C;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.sobre-nosotros-forma p {
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+}
+
+.sobre-nosotros-forma span {
+    font-weight: 600;
+}
+
+.sobre-nosotros-botones {
+    margin-top: 50px;
+    display: inline-block;
+    background: #FBDD9D;
+    color: #71160C;
+    font-family: 'PPAgrandir-Normal', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 3px solid #71160C;
+    border-radius: 32px;
+    padding: 12px 48px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.13s;
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.sobre-nosotros-botones:focus,
+.sobre-nosotros-botones:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.sobre-nosotros-botones:hover {
+    background: #F5B5D2;
+    transform: scale(1.08);
+}
+
+.sobre-nosotros-botones-contenedor {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
