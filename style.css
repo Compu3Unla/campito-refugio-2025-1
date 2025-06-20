@@ -230,6 +230,57 @@ h1 {
     }
 }
 
+/* NAV RESPONSIVE */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.nav-toggle-bar {
+    width: 28px;
+    height: 4px;
+    background: #71160C;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 20px 0;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 16px rgba(113,22,12,0.10);
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .main-nav {
+        position: relative;
+    }
+    .nav-social {
+        margin-top: 12px;
+    }
+}
+
 /* FOOTER */
 footer {
     background: #FBDD9D;
@@ -1821,4 +1872,69 @@ header {
 
 .h2-agradecimiento {
     margin-top: 90px !important;
+}
+
+@media (max-width: 700px) {
+    .hero-paginas {
+        margin-left: 0;
+        padding: 2em 0.5em;
+        min-height: 10em;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-paginas h2 {
+        font-size: 2.2em;
+        margin-top: 2.5em;
+        text-align: center;
+    }
+    .hero-paginas h6 {
+        font-size: 1em;
+        text-align: center;
+        padding: 0 0.5em;
+    }
+    .manos-donacion-svg {
+        width: 4em !important;
+        max-width: 30vw;
+        margin: 0 0.8em 0 0.8em;
+    }
+    .huellitas-hero.patita-amarilla-donaciones {
+        width: 60vw !important;
+        max-width: 90vw;
+        right: 2vw;
+        top: 1em;
+    }
+    .tarjetas-donaciones {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+        max-width: 98vw;
+        margin: 2em auto 0 auto;
+        padding: 1.5em 0.2em;
+    }
+    .donacion-card {
+        padding: 1.5em 1em;
+        min-width: 0;
+        font-size: 1em;
+    }
+    .stickers-donaciones {
+        height: 10em;
+        min-height: 7em;
+    }
+    .sticker-donacion {
+        width: 4.5em !important;
+        min-width: 2.5em;
+        max-width: 7em;
+    }
+    .h2-agradecimiento {
+        font-size: 1.5em;
+        margin-top: 2.5em !important;
+    }
+    .agradecimiento-donaciones p {
+        font-size: 1em;
+        padding: 0 0.5em;
+    }
+    .footer-huella {
+        width: 30vw;
+        left: 1em;
+        bottom: 1em;
+    }
 }

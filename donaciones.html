@@ -17,6 +17,11 @@
                     <img src="img/svg/perro-orejita.svg" alt="Logo">
                 </a>
             </div>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
             <ul class="nav-menu">
                 <li class="nav-dropdown">
                     <a href="galeria-perritos.html">Adopciones <img src="img/svg/flecha-desplegable-nav.svg"
@@ -179,5 +184,9 @@
     </section>
     <img src="img/svg/huellitas.svg" alt="huella" class="footer-huella">
 </footer>
-
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('open');
+});
+</script>
 </html>
