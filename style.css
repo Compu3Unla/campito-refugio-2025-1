@@ -237,9 +237,9 @@ h1 {
 }
 
 .sticker-perro {
-    top: 150px;
-    left: 280px;
-    width: 300px;
+    top: 120px;
+    left: 200px;
+    width: 240px; /* reducido, antes 300px */
     transform: rotate(-5deg);
 }
 
@@ -818,7 +818,7 @@ h6.campito-descripcion {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100%;
+    height: 117%;
     min-height: 118vh;
     object-fit: cover;
     z-index: 0;
