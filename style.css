@@ -237,9 +237,9 @@ h1 {
 }
 
 .sticker-perro {
-    top: 150px;
-    left: 280px;
-    width: 300px;
+    top: 120px;
+    left: 200px;
+    width: 240px; /* reducido, antes 300px */
     transform: rotate(-5deg);
 }
 
